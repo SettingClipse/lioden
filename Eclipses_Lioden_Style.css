@@ -3,147 +3,175 @@
 <head>
     <title>HTML, CSS and JavaScript demo</title>
     <style>
+        /* FONT (From Google Fonts) */
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+        /* BODY */
         body {
-            background-color: #1A001E;
-            background-image: url(https://i.ibb.co/n8cGVYmC/image-2025-02-02-070417940.png); 
-            background-size: cover;
-            background-position: center center;
-        }
+    background-color: #1A001E;
+    background-image: url(https://i.ibb.co/WWZxG1c6/image-2025-02-02-061516175-optimized.png); 
+    background-size: cover;  /* Covers the viewport but may crop */
+    background-position: top center;  /* Keeps the image's top part centered */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    height: 100vh;  /* Ensures body takes full viewport height */
+    font-family: 'Permanent Marker', Arial, sans-serif;
+    color: #E6C9D1; /* Light text color */
+}
 
-        p, span, li, a {
-            color: #E6C9D1; 
-        }
-
-        a:hover {
-            color: #FF705E; 
-            text-shadow: 0px 0px 5px #FF705E;
-        }
-
-        /* Boxed Elements */
-        #content {
-            background-color: rgba(26, 0, 30, 0.8); 
-            border: 1px solid #9E768F; 
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px #9E768F; 
-            padding: 20px;
-        }
-
-        button {
-            background-color: #FF705E; 
+        /* MAIN PANEL */
+        .container.main {
+            background: rgba(26, 0, 30, 0.8); /* Dark transparent background */
             border: none;
-            color: white;
-            padding: 10px 20px;
-            text-shadow: 0px 0px 5px #FF705E;
-            box-shadow: 0px 0px 10px #FF705E;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #FF9F7D;
-            box-shadow: 0px 0px 15px #FF9F7D;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: #FFC1C1; 
-            text-shadow: 0px 0px 10px #FF705E;
-        }
-
-        .navbar {
-            background-color: #520031; 
-            border-bottom: 2px solid #FF705E; 
-            padding: 10px;
-        }
-
-        .navbar a {
-            color: #E6C9D1;
-        }
-
-        .navbar a:hover {
-            color: #FF705E;
-            text-shadow: 0px 0px 5px #FF705E;
-        }
-
-        footer {
-            background-color: #1A001E;
-            color: #E6C9D1;
-            text-align: center;
+            box-shadow: 0px 0px 10px #9E768F; /* Subtle box shadow */
+            border-radius: 10px;
             padding: 20px;
-            border-top: 1px solid #9E768F;
+        }
+
+        /* RIGHT SIDE */
+        .col-md-9 {
+            background: none;
+            border-right: none;
+        }
+
+        /* TOPBAR ("Welcome back, ___") */
+        .topbar {
+            background: rgba(1, 1, 1, 0.5);
+            border: none;
+            border-top: none;
+            color: #FFC1C1; /* Lighter color for text */
+            border-radius: 0px;
+        }
+
+        /* NAVBAR (Den/Crossroads/Etc.) */
+        .navbar {
+            background: rgba(1, 1, 1, 0.5);
+            border-bottom: 2px solid #FF705E; /* Soft border for navbar */
+            color: #E6C9D1;
+            border-radius: 0px;
+        }
+
+        .navbar li a {
+            color: #E6C9D1 !important;
+        }
+
+        .navbar li a:hover {
+            background: rgba(1, 1, 1, 0.5) !important;
+            color: #FF705E !important; /* Text color on hover */
+            text-shadow: 0px 0px 5px #FF705E; /* Hover effect */
+        }
+
+        /* BREADCRUMB (Home / Den) */
+        .breadcrumb {
+            background: rgba(1, 1, 1, 0.5) !important;
+            border: none;
+            border-radius: 0px;
+        }
+
+        .breadcrumb .active {
+            color: #FF705E; /* Active breadcrumb item color */
+        }
+
+        /* CSS CREDIT */
+        .breadcrumb::after {
+            content: "Template by Katie (#106445)";
+            color: #E6C9D1;
+            position: absolute;
+            right: 13%; /* Adjust if necessary */
+            z-index: 100;
+        }
+
+        @media only screen and (max-width: 1199px) and (min-width: 992px) {
+            .breadcrumb::after {
+                right: 20%;
+            }
+        }
+
+        @media only screen and (max-width: 991px) and (min-width: 768px) {
+            .breadcrumb::after {
+                right: 20%;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .breadcrumb::after {
+                right: 22%;
+            }
+        }
+
+        /* BUTTONS AND ALERTS STYLES */
+        input.floatright, input.floatright:hover, button.button, button.button:hover {
+            background: rgba(1, 1, 1, 0.5) !important;
+            border: none !important;
+            border-radius: 0px;
+            color: #E6C9D1 !important;
+        }
+
+        /* ALERTS (ie. "Your lionesses have returned from hunting!") */
+        .alert, .alert-warning, .alert-danger {
+            background: rgba(1, 1, 1, 0.5) !important;
+            border: none;
+            color: #E6C9D1;
+            border-radius: 0px !important;
+        }
+
+        /* HEADERS */
+        h1 {
+            color: #FFC1C1; /* Lighter color for large headings */
+            font-size: 90px;
+            text-align: center;
+            text-shadow: 0px 0px 10px #FF705E; /* Text glow effect */
+        }
+
+        h2 {
+            color: #FFC1C1;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #E6C9D1 !important;
+            font-size: 14px !important;
+        }
+
+        .sidebar h3 {
+            color: #FFC1C1 !important;
+            font-size: 26px !important;
+        }
+
+        /* ENERGY BAR BACKGROUND */
+        .progress {
+            background: rgba(1, 1, 1, 0.5);
+            color: #E6C9D1 !important;
+            border-radius: 0px !important;
+        }
+
+        /* CHAT */
+        .s-chat-message:nth-child(even), .s-chat-message:nth-child(odd), .s-chat-message__pinned {
+            background: rgba(1, 1, 1, 0.5) !important;
+            color: #E6C9D1 !important;
+            border: none !important;
+        }
+
+        .s-chat-message_timestamp {
+            color: #E6C9D1 !important;
+        }
+
+        /* SCROLL BAR */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #2e2a2b; /* Dark background for scrollbar */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #9E768F;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <style>
-        body {
-            background-color: #1A001E;
-            background-image: url(https://i.ibb.co/n8cGVYmC/image-2025-02-02-070417940.png); 
-            background-size: cover;
-            background-position: center center;
-        }
-
-        p, span, li, a {
-            color: #E6C9D1; 
-        }
-
-        a:hover {
-            color: #FF705E; 
-            text-shadow: 0px 0px 5px #FF705E;
-        }
-
-        /* Boxed Elements */
-        #content {
-            background-color: rgba(26, 0, 30, 0.8); 
-            border: 1px solid #9E768F; 
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px #9E768F; 
-            padding: 20px;
-        }
-
-        button {
-            background-color: #FF705E; 
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-shadow: 0px 0px 5px #FF705E;
-            box-shadow: 0px 0px 10px #FF705E;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #FF9F7D;
-            box-shadow: 0px 0px 15px #FF9F7D;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: #FFC1C1; 
-            text-shadow: 0px 0px 10px #FF705E;
-        }
-
-        .navbar {
-            background-color: #520031; 
-            border-bottom: 2px solid #FF705E; 
-            padding: 10px;
-        }
-
-        .navbar a {
-            color: #E6C9D1;
-        }
-
-        .navbar a:hover {
-            color: #FF705E;
-            text-shadow: 0px 0px 5px #FF705E;
-        }
-
-        footer {
-            background-color: #1A001E;
-            color: #E6C9D1;
-            text-align: center;
-            padding: 20px;
-            border-top: 1px solid #9E768F;
-        }
-    </style>
+    <!-- Your HTML content here -->
 </body>
 </html>
-
