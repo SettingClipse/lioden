@@ -6,28 +6,28 @@
         /* FONT (From Google Fonts) */
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-        /* BODY */
+        /* BACKGROUND */
         body {
-    background-color: #1A001E;
-    background-image: url(https://i.ibb.co/WWZxG1c6/image-2025-02-02-061516175-optimized.png); 
-    background-size: cover;  /* Covers the viewport but may crop */
-    background-position: top center;  /* Keeps the image's top part centered */
-    background-repeat: no-repeat;  /* Prevents tiling */
-    height: 100vh;  /* Ensures body takes full viewport height */
-    font-family: 'Permanent Marker', Arial, sans-serif;
-    color: #E6C9D1; /* Light text color */
-}
-
-        /* MAIN PANEL */
-        .container.main {
-            background: rgba(26, 0, 30, 0.8); /* Dark transparent background */
-            border: none;
-            box-shadow: 0px 0px 10px #9E768F; /* Subtle box shadow */
-            border-radius: 10px;
-            padding: 20px;
+            background-color: #1B0B1C; /* Background color */
+            background-image: url(https://i.ibb.co/WWZxG1c6/image-2025-02-02-061516175-optimized.png); 
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            font-family: Permanent Marker, Arial, sans-serif;
+            color: #B4847F; /* Light text color */
         }
 
+        /* MAIN PANEL */
         /* RIGHT SIDE */
+        .container.main {
+            background: rgba(1, 1, 1, 0.5);
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+        }
+
+        /* LEFT SIDE */
         .col-md-9 {
             background: none;
             border-right: none;
@@ -38,26 +38,29 @@
             background: rgba(1, 1, 1, 0.5);
             border: none;
             border-top: none;
-            color: #FFC1C1; /* Lighter color for text */
+            color: #B4847F;
             border-radius: 0px;
         }
 
         /* NAVBAR (Den/Crossroads/Etc.) */
         .navbar {
             background: rgba(1, 1, 1, 0.5);
-            border-bottom: 2px solid #FF705E; /* Soft border for navbar */
-            color: #E6C9D1;
+            border-bottom: none;
+            color: #B4847F;
             border-radius: 0px;
         }
 
+        /* NAVBAR BUTTON TEXT COLOR */
         .navbar li a {
-            color: #E6C9D1 !important;
+            color: #B4847F !important; /* Text color */
         }
 
+        /* NAVBAR BUTTON HOVER */
         .navbar li a:hover {
             background: rgba(1, 1, 1, 0.5) !important;
-            color: #FF705E !important; /* Text color on hover */
-            text-shadow: 0px 0px 5px #FF705E; /* Hover effect */
+            border-bottom: none;
+            color: #B4847F !important;
+            border-radius: 0px;
         }
 
         /* BREADCRUMB (Home / Den) */
@@ -67,107 +70,196 @@
             border-radius: 0px;
         }
 
+        /* BREADCRUMB TEXT */
         .breadcrumb .active {
-            color: #FF705E; /* Active breadcrumb item color */
+            color: #B4847F;
         }
 
         /* CSS CREDIT */
         .breadcrumb::after {
             content: "Template by Katie (#106445)";
-            color: #E6C9D1;
+            color: #B4847F;
             position: absolute;
-            right: 13%; /* Adjust if necessary */
+            right: 13%;
             z-index: 100;
         }
 
-        @media only screen and (max-width: 1199px) and (min-width: 992px) {
-            .breadcrumb::after {
-                right: 20%;
-            }
-        }
-
-        @media only screen and (max-width: 991px) and (min-width: 768px) {
-            .breadcrumb::after {
-                right: 20%;
-            }
-        }
-
-        @media only screen and (max-width: 767px) {
-            .breadcrumb::after {
-                right: 22%;
-            }
-        }
-
-        /* BUTTONS AND ALERTS STYLES */
-        input.floatright, input.floatright:hover, button.button, button.button:hover {
-            background: rgba(1, 1, 1, 0.5) !important;
+        /* BUTTONS */
+        button.button, button.button:hover {
+            background: #5A1A28; /* Button color */
             border: none !important;
             border-radius: 0px;
+            text-shadow: none !important;
             color: #E6C9D1 !important;
         }
 
         /* ALERTS (ie. "Your lionesses have returned from hunting!") */
-        .alert, .alert-warning, .alert-danger {
+        .alert,
+        .alert-warning,
+        .alert-danger {
             background: rgba(1, 1, 1, 0.5) !important;
             border: none;
-            color: #E6C9D1;
+            color: #B4847F;
             border-radius: 0px !important;
         }
 
-        /* HEADERS */
+        /* BIGGEST HEADER ("___"'s DEN) */
         h1 {
-            color: #FFC1C1; /* Lighter color for large headings */
+            color: #B4847F; /* Header color */
             font-size: 90px;
             text-align: center;
-            text-shadow: 0px 0px 10px #FF705E; /* Text glow effect */
+            font-family: 'Permanent Marker', Arial, sans-serif;
         }
 
+        /* MEDIUM HEADER */
         h2 {
-            color: #FFC1C1;
+            color: #B4847F;
             font-size: 24px;
             text-align: center;
         }
 
-        h3 {
-            color: #E6C9D1 !important;
-            font-size: 14px !important;
+        /* RIGHT SIDE PANEL HEADER */
+        .sidebar h3 {
+            color: #B4847F;
+            font-size: 26px !important;
+            font-family: 'Permanent Marker', Arial, sans-serif;
         }
 
-        .sidebar h3 {
-            color: #FFC1C1 !important;
-            font-size: 26px !important;
+        /* RIGHT SIDE PANELS */
+        .panel {
+            background: rgba(1, 1, 1, 0.5) !important;
+            box-shadow: none !important;
+            border: none !important;
+            color: #B4847F !important;
+            border-radius: 0px;
         }
 
         /* ENERGY BAR BACKGROUND */
         .progress {
-            background: rgba(1, 1, 1, 0.5);
-            color: #E6C9D1 !important;
+            background: #280E1F; /* Energy bar background */
+            color: #B4847F !important;
             border-radius: 0px !important;
         }
 
-        /* CHAT */
-        .s-chat-message:nth-child(even), .s-chat-message:nth-child(odd), .s-chat-message__pinned {
-            background: rgba(1, 1, 1, 0.5) !important;
-            color: #E6C9D1 !important;
-            border: none !important;
+        /* ENERGY BAR COLOR */
+        .progress-bar {
+            background: #5A1A28; /* Energy bar color */
+            color: #B4847F !important;
+            border-radius: 0px !important;
         }
 
-        .s-chat-message_timestamp {
-            color: #E6C9D1 !important;
+        /* ENERGY BAR TEXT */
+        .progress div {
+            color: #B4847F !important;
         }
 
         /* SCROLL BAR */
+        /* WIDTH */
         ::-webkit-scrollbar {
             width: 10px;
         }
 
+        /* BACKGROUND */
         ::-webkit-scrollbar-track {
-            background: #2e2a2b; /* Dark background for scrollbar */
+            background: #ffffff;
         }
 
+        /* "THUMB" */
         ::-webkit-scrollbar-thumb {
-            background: #9E768F;
-            border-radius: 5px;
+            background: #B4847F;
+            border-radius: 0px;
+        }
+
+        /* ACCOUNT OPTIONS PANELS  (Friend Requests Toggles, etc.) */
+        .item-header {
+            background: rgba(1, 1, 1, 0.5) !important;
+            color: #B4847F !important;
+            border-radius: 0px !important;
+        }
+
+        /* ACCOUNT OPTIONS ON/OFF TOGGLE SWITCH */
+        div.slider.round /* Background */ {
+            background: #B4847F !important;
+        }
+
+        div.slider.round::before /* Circle Part */ {
+            background: #B4847F !important;
+        }
+
+        /* LINK COLOR */
+        a:link,
+        a:visited {
+            color: #ffffff !important;
+        }
+
+        /* LINK HOVER COLOR */
+        a:hover {
+            color: #ffffff !important;
+        }
+
+        /* BOX CONTAINER */
+        .boxcontainer {
+            background: none;
+            height: auto;
+            padding: 0px;
+            justify-content: center;
+            display: flex;
+        }
+
+        /* BOXES */
+        .smallbox,
+        .mediumbox,
+        .largebox {
+            background: rgba(1, 1, 1, 0.5);
+            color: #B4847F;
+            padding: 10px;
+            border: none;
+            border-radius: 0px;
+            margin: 10px;
+            height: 150px;
+            overflow: auto;
+        }
+
+        .smallbox {
+            width: 28.4%;
+        }
+
+        .mediumbox {
+            width: 43.8%;
+        }
+
+        .largebox {
+            width: 90%;
+        }
+
+        /* HOVER BOXES */
+        .smallhoverbox,
+        .mediumhoverbox,
+        .largehoverbox {
+            background: rgba(1, 1, 1, 0.5);
+            color: #B4847F;
+            padding: 10px;
+            border: none;
+            border-radius: 0px;
+            margin: 10px;
+            height: 50px;
+            overflow: auto;
+            transition: 3s;
+        }
+
+        .smallhoverbox:hover {
+            height: 150px;
+            width: 28.4%;
+        }
+
+        .mediumhoverbox:hover {
+            height: 150px;
+            width: 43.8%;
+        }
+
+        .largehoverbox:hover {
+            height: 150px;
+            width: 90%;
         }
     </style>
 </head>
@@ -175,3 +267,4 @@
     <!-- Your HTML content here -->
 </body>
 </html>
+
