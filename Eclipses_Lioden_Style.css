@@ -1,0 +1,76 @@
+/* Lioden CSS based on uploaded image */
+
+/* Background */
+body {
+    background-color: #1A001E; /* Deep dark purple */
+    background-image: url('URL_TO_YOUR_IMAGE'); /* Set the uploaded image as the background */
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Text */
+p, span, li, a {
+    color: #E6C9D1; /* Light pink/white */
+}
+
+a:hover {
+    color: #FF705E; /* Light up the links in a glowing orange when hovered */
+    text-shadow: 0px 0px 5px #FF705E;
+}
+
+/* Boxed Elements */
+#content {
+    background-color: rgba(26, 0, 30, 0.8); /* Semi-transparent dark purple */
+    border: 1px solid #9E768F; /* Subtle border around content */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #9E768F; /* Glow effect */
+    padding: 20px;
+}
+
+/* Buttons */
+button {
+    background-color: #FF705E; /* Glowing orange/red button */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-shadow: 0px 0px 5px #FF705E;
+    box-shadow: 0px 0px 10px #FF705E;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF9F7D; /* Lighten the button on hover */
+    box-shadow: 0px 0px 15px #FF9F7D;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #FFC1C1; /* Light red/pink headers */
+    text-shadow: 0px 0px 10px #FF705E;
+}
+
+/* Nav Bar */
+.navbar {
+    background-color: #520031; /* Dark burgundy navigation bar */
+    border-bottom: 2px solid #FF705E; /* Glowing bottom border */
+    padding: 10px;
+}
+
+.navbar a {
+    color: #E6C9D1;
+}
+
+.navbar a:hover {
+    color: #FF705E;
+    text-shadow: 0px 0px 5px #FF705E;
+}
+
+/* Footer */
+footer {
+    background-color: #1A001E;
+    color: #E6C9D1;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #9E768F;
+}
