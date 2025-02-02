@@ -1,6 +1,11 @@
-body {
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>HTML, CSS and JavaScript demo</title>
+<style>
+    body {
     background-color: #1A001E;
-    background-image: url('URL_TO_YOUR_IMAGE'); 
+    background-image: url(https://i.ibb.co/n8cGVYmC/image-2025-02-02-070417940.png); 
     background-size: cover;
     background-position: center center;
 }
@@ -23,7 +28,6 @@ a:hover {
     padding: 20px;
 }
 
-
 button {
     background-color: #FF705E; 
     border: none;
@@ -40,12 +44,10 @@ button:hover {
     box-shadow: 0px 0px 15px #FF9F7D;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
     color: #FFC1C1; 
     text-shadow: 0px 0px 10px #FF705E;
 }
-
 
 .navbar {
     background-color: #520031; 
@@ -62,7 +64,6 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0px 0px 5px #FF705E;
 }
 
-
 footer {
     background-color: #1A001E;
     color: #E6C9D1;
@@ -70,3 +71,8 @@ footer {
     padding: 20px;
     border-top: 1px solid #9E768F;
 }
+</style>
+</head>
+<body>
+</body>
+</html>
