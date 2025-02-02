@@ -1,78 +1,149 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>HTML, CSS and JavaScript demo</title>
-<style>
-    body {
-    background-color: #1A001E;
-    background-image: url(https://i.ibb.co/n8cGVYmC/image-2025-02-02-070417940.png); 
-    background-size: cover;
-    background-position: center center;
-}
+    <title>HTML, CSS and JavaScript demo</title>
+    <style>
+        body {
+            background-color: #1A001E;
+            background-image: url(https://i.ibb.co/n8cGVYmC/image-2025-02-02-070417940.png); 
+            background-size: cover;
+            background-position: center center;
+        }
 
-p, span, li, a {
-    color: #E6C9D1; 
-}
+        p, span, li, a {
+            color: #E6C9D1; 
+        }
 
-a:hover {
-    color: #FF705E; 
-    text-shadow: 0px 0px 5px #FF705E;
-}
+        a:hover {
+            color: #FF705E; 
+            text-shadow: 0px 0px 5px #FF705E;
+        }
 
-/* Boxed Elements */
-#content {
-    background-color: rgba(26, 0, 30, 0.8); 
-    border: 1px solid #9E768F; 
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #9E768F; 
-    padding: 20px;
-}
+        /* Boxed Elements */
+        #content {
+            background-color: rgba(26, 0, 30, 0.8); 
+            border: 1px solid #9E768F; 
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #9E768F; 
+            padding: 20px;
+        }
 
-button {
-    background-color: #FF705E; 
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-shadow: 0px 0px 5px #FF705E;
-    box-shadow: 0px 0px 10px #FF705E;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
+        button {
+            background-color: #FF705E; 
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-shadow: 0px 0px 5px #FF705E;
+            box-shadow: 0px 0px 10px #FF705E;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-button:hover {
-    background-color: #FF9F7D;
-    box-shadow: 0px 0px 15px #FF9F7D;
-}
+        button:hover {
+            background-color: #FF9F7D;
+            box-shadow: 0px 0px 15px #FF9F7D;
+        }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #FFC1C1; 
-    text-shadow: 0px 0px 10px #FF705E;
-}
+        h1, h2, h3, h4, h5, h6 {
+            color: #FFC1C1; 
+            text-shadow: 0px 0px 10px #FF705E;
+        }
 
-.navbar {
-    background-color: #520031; 
-    border-bottom: 2px solid #FF705E; 
-    padding: 10px;
-}
+        .navbar {
+            background-color: #520031; 
+            border-bottom: 2px solid #FF705E; 
+            padding: 10px;
+        }
 
-.navbar a {
-    color: #E6C9D1;
-}
+        .navbar a {
+            color: #E6C9D1;
+        }
 
-.navbar a:hover {
-    color: #FF705E;
-    text-shadow: 0px 0px 5px #FF705E;
-}
+        .navbar a:hover {
+            color: #FF705E;
+            text-shadow: 0px 0px 5px #FF705E;
+        }
 
-footer {
-    background-color: #1A001E;
-    color: #E6C9D1;
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #9E768F;
-}
-</style>
+        footer {
+            background-color: #1A001E;
+            color: #E6C9D1;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #9E768F;
+        }
+    </style>
 </head>
 <body>
+    <style>
+        body {
+            background-color: #1A001E;
+            background-image: url(https://i.ibb.co/n8cGVYmC/image-2025-02-02-070417940.png); 
+            background-size: cover;
+            background-position: center center;
+        }
+
+        p, span, li, a {
+            color: #E6C9D1; 
+        }
+
+        a:hover {
+            color: #FF705E; 
+            text-shadow: 0px 0px 5px #FF705E;
+        }
+
+        /* Boxed Elements */
+        #content {
+            background-color: rgba(26, 0, 30, 0.8); 
+            border: 1px solid #9E768F; 
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #9E768F; 
+            padding: 20px;
+        }
+
+        button {
+            background-color: #FF705E; 
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-shadow: 0px 0px 5px #FF705E;
+            box-shadow: 0px 0px 10px #FF705E;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FF9F7D;
+            box-shadow: 0px 0px 15px #FF9F7D;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #FFC1C1; 
+            text-shadow: 0px 0px 10px #FF705E;
+        }
+
+        .navbar {
+            background-color: #520031; 
+            border-bottom: 2px solid #FF705E; 
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #E6C9D1;
+        }
+
+        .navbar a:hover {
+            color: #FF705E;
+            text-shadow: 0px 0px 5px #FF705E;
+        }
+
+        footer {
+            background-color: #1A001E;
+            color: #E6C9D1;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #9E768F;
+        }
+    </style>
 </body>
 </html>
+
